@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+		<title>TeMaster V1.6</title>
+		<script type="text/javascript" src="js_css/jquery-3.5.1.js"></script>
+		<style type="text/css">			
+			a:hover {					/* 设置a标签当鼠标覆盖状态时去除下划线 */
+				text-decoration: none;		
+				color: red;
+			}
+			
+			.title1 {				/* 标题1样式 */
+				padding: 10px 0;
+				font-size: 24px;
+				font-weight: bold;
+				color: #f60;
+				margin: 0 0 20px 0;
+				line-height: 1.5;
+				border-bottom: 1px dashed #999;
+			}
+			
+			.title2 {				/* 标题2样式 */
+				padding: 10px 0;
+				font-size: 18px;
+				font-weight: bold;
+				color: #f60;
+				margin: 0 0 20px 0;
+				line-height: 1.5;
+				border-bottom: 1px dashed #999;
+			}
+
+		</style>
+	</head>
+	
+	
+	<body>
+		<!-- Tutorial -->
+		<p class="title1">Tutorial</p>
+		<a id="offline_marking_for_RDR2_anchor" href="javascript:void(0);" onclick="offline_marking_for_RDR2_show()">Offline Marking for RDR2</a><br/><br/>
+		<div id="offline_marking_for_RDR2_div" style="display: none;">
+			
+			<p id="offline_marking_for_RDR2_div_hide"><a href="javascript:void(0);" onclick="offline_marking_for_RDR2_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<!-- Err Diag -->
+		<p class="title1">Err Diag</p>
+		
+		<a id="iTAC_error_1_anchor" href="javascript:void(0);" onclick="iTAC_error_1_show()">iTAC Error: Flash_File NOT MATCHED</a><br/><br/>
+		<div id="iTAC_error_1_div" style="display: none;">
+			<img src="TeDiag\iTAC\iTAC_error_1.jpg" border="1" style="width:50%;height:auto"><br/><br/>
+			
+			<table border="1" cellspacing="0">
+				<tr>
+					<th>Occurred</th>
+					<th>Line</th>
+					<th>Solution</th>
+				</tr>
+				<tr>
+					<td>2021-12-11</td>
+					<th>//</th>
+					<td>iTAC配置错误，联系IT</td>
+				</tr>
+			</table>
+			<p id="iTAC_error_1_div_hide"><a href="javascript:void(0);" onclick="iTAC_error_1_hide()">Hide</a></p>
+		</div>
+		
+		
+		<a id="SEL_error_1_anchor" href="javascript:void(0);" onclick="SEL_error_1_show()">SEL Error: The TestStand Engine cannot be initialized</a><br/><br/>
+		<div id="SEL_error_1_div" style="display: none;">
+			<img src="TeDiag\RDR_SEL\The TestStand Engine cannot be initialized_1.jpg" border="1" style="width:70%;height:auto"><br/><br/>
+			<img src="TeDiag\RDR_SEL\The TestStand Engine cannot be initialized_2.jpg" border="1" style="width:50%;height:auto"><br/><br/>
+			
+			<table border="1" cellspacing="0">
+				<tr>
+					<th>Occurred</th>
+					<th>Line</th>
+					<th>Solution</th>
+				</tr>
+				<tr>
+					<td>2022-10-31</td>
+					<td>RDR4</td>
+					<td>Delete "StationGlobals.ini" in C:\ProgramData\National Instruments\TestStand 20XX (32-bit)\Cfg</td>
+				</tr>
+			</table>
+			<p id="SEL_error_1_div_hide"><a href="javascript:void(0);" onclick="SEL_error_1_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+
+		<!-- WebSite -->
+		<p class="title1">WebSite</p>
+		<a id="website_anchor" href="javascript:void(0);" onclick="website_show()">WebSite</a><br/><br/>
+		<div id="website_div" style="display: none;">
+			<table border="1" cellspacing="0">
+				<tr>
+					<th>Desc</th>
+					<th>WebSite</th>
+					<th>Note</th>
+				</tr>
+				
+				<tr>
+					<td>CFM-Manufacture OA 办公系统</td>
+					<td><a href="http://cfm-manufacture.corp.int/" target="_blank" style="text-decoration:none">CFM-Manufacture OA 办公系统</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>Concur</td>
+					<td><a href="https://eu1.concursolutions.com/UI/SSO/p0604063hvxi" target="_blank" style="text-decoration:none">https://eu1.concursolutions.com/UI/SSO/p0604063hvxi</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>Web-Office</td>
+					<td><a href="http://office.veoneer.com/" target="_blank" style="text-decoration:none">http://office.veoneer.com/</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>Change password</td>
+					<td><a href="https://account.activedirectory.windowsazure.com/ChangePassword.aspx" target="_blank" style="text-decoration:none">https://account.activedirectory.windowsazure.com/ChangePassword.aspx</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>Veoneer security</td>
+					<td><a href="https://security.veoneer.com" target="_blank" style="text-decoration:none">https://security.veoneer.com</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>AWS</td>
+					<td><a href="http://cn01-aws01/" target="_blank" style="text-decoration:none">http://cn01-aws01/</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>BPM</td>
+					<td><a href="http://chinabpm.veoneer.com/" target="_blank" style="text-decoration:none">http://chinabpm.veoneer.com/</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>ESS</td>
+					<td><a href="https://veoneer.dhr-cloud.com/platinumhrm-ess/logon.aspx" target="_blank" style="text-decoration:none">Platinum HRM - ESS (dhr-cloud.com)</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>CPC</td>
+					<td><a href="https://veoneer.sharepoint.com/sites/ConcessionandCPCDB/Lists/CPCinformation/Gategory.aspx?OR=Teams%2DHL&CT=1641950967990&sourceId=&params=%7B%22AppName%22%3A%22Teams%2DDesktop%22%2C%22AppVersion%22%3A%2227%2F21110108719%22%7D" target="_blank" style="text-decoration:none">Concession and CPC DB - CPC information DB - ALL VIEW (sharepoint.com)</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>PLM</td>
+					<td><a href="https://plm.corp.int:10090/enovia/common/emxNavigator.jsp" target="_blank" style="text-decoration:none">https://plm.corp.int:10090/enovia/common/emxNavigator.jsp</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>Security Awareness</td>
+					<td><a href="https://security.veoneer.com" target="_blank" style="text-decoration:none">https://security.veoneer.com</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>IT request</td>
+					<td>
+						<a href="https://veoneer.service-now.com/sp?id=sc_home" target="_blank" style="text-decoration:none">https://veoneer.service-now.com/sp?id=sc_home</a>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>apply for z-account</td>
+					<td>
+						<a href="https://veoneer.service-now.com/sp?id=sc_cat_item&sys_id=5f7580a5dbe82384b675f59dae961920" target="_blank" style="text-decoration:none">https://veoneer.service-now.com/sp?id=sc_cat_item&sys_id=5f7580a5dbe82384b675f59dae961920</a>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>apply for MEDC</td>
+					<td>
+						<a href="https://veoneer.service-now.com/sp?id=search&spa=1&q=MEDC" target="_blank" style="text-decoration:none">https://veoneer.service-now.com/sp?id=search&spa=1&q=MEDC</a>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>MEDC</td>
+					<td>
+						<a href="https://mes-mgmt/" target="_blank" style="text-decoration:none">https://mes-mgmt/</a>
+					</td>
+					<td>Remote Control</td>
+				</tr>
+				
+				<tr>
+					<td>ePDD 2022</td>
+					<td>
+						<a href="https://performancemanager.successfactors.eu/sf/home?bplte_company=autolivele&_s.crb=%252fpKjtQS5cemdZbakarQLIaPE3l1c0nNQfh%252fHDeJn0W4%253d#Shell-home" target="_blank" style="text-decoration:none">ePDD 2022</a>
+						
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>LBL Logo</td>
+					<td><a href="https://convertio.co/zh/" target="_blank" style="text-decoration:none">https://convertio.co/zh/</a></td>
+					<td>convert jpg to dxf</td>
+				</tr>
+				
+				<tr>
+					<td>Git Hub</td>
+					<td><a href="https://github.com/" target="_blank" style="text-decoration:none">https://github.com/</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>草料二维码生成器</td>
+					<td><a href="https://cli.im/" target="_blank" style="text-decoration:none">https://cli.im/</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>在线PDF编辑器</td>
+					<td><a href="https://www.ilovepdf.com/zh-cn/edit-pdf" target="_blank" style="text-decoration:none">https://www.ilovepdf.com/zh-cn/edit-pdf</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>DHL</td>
+					<td><a href="https://eship.cndhl.com/index.jsp" target="_blank" style="text-decoration:none">https://eship.cndhl.com/index.jsp</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>Directory</td>
+					<td><a href="V:\CN01\Common\Communications\General (10)\HR_Admin\Admin\通讯录Directory" target="_blank" style="text-decoration:none">V:\CN01\Common\Communications\General (10)\HR_Admin\Admin\通讯录Directory</a></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>Network Drive</td>
+					<td><a href="\\10.124.9.55" target="_blank" style="text-decoration:none">\\10.124.9.55</a></td>
+					<td></td>
+				</tr>
+			</table>
+			<p id="website_div_hide"><a href="javascript:void(0);" onclick="website_hide()">Hide</a></p>
+		</div>
+		<br/>
+
+		<!-- IP Address -->
+		<p class="title1">IP Address</p>
+		<a id="ip_address_anchor" href="javascript:void(0);" onclick="ip_address_show()">IP Address</a><br/><br/>
+		<div id="ip_address_div" style="display: none;">
+			<table border="1" cellspacing="0">
+				<tr>
+					<th>Host Name</th>
+					<th>Site</th>
+					<!-- <th>IP</th> -->
+					<th>Account</th>
+				</tr>
+				
+				<tr>
+					<td>CN01-MA-WD4121</td>
+					<td>RADAR-01-SENSOR TEST-AZ</td>
+					<!-- <td>10.124.93.16&nbsp;<input type="button" onclick="PC_RADAR_01_ST_AZ();" value="ok" /></td> -->
+					<td>PW: CN01operator</td>
+				</tr>
+				
+				<tr>
+					<td>CN01-MA-WD4122</td>
+					<td>RADAR-01-SENSOR TEST-EL</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>PRJ18065</td>
+					<td>RADAR-01-SOFTWARE LOAD</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>PRJ18064</td>
+					<td>RADAR-01-EOL</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>...</td>
+					<td>...</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>CN01-MA-WD4206</td>
+					<td>RADAR-02-SENSOR TEST 1</td>
+					<!-- <td></td> -->
+					<td>PW: CN01operator</td>
+				</tr>
+				
+				<tr>
+					<td>CN01-MA-WD4207</td>
+					<td>RADAR-02-SENSOR TEST 2</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>CN01-MA-WD4205</td>
+					<td>RADAR-02-MASTER</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>CN01-MA-WD4204</td>
+					<td>RADAR-02-SOFTWARE LOAD</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>CN01-MA-WD4202</td>
+					<td>RADAR-02-END OF LINE</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				 <tr>
+					<td>CN01-MA-WD4203</td>
+					<td>RADAR-02-LASER ETCH</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>...</td>
+					<td>RADAR-02-PDI</td>
+					<!-- <td></td> -->
+					<td>Debug: test / autolivace</td>
+				</tr>
+				
+				<tr>
+					<td>...</td>
+					<td>RADAR-02-PACKING</td>
+					<!-- <td></td> -->
+					<td>Debug: </td>
+				</tr>
+				
+				<tr>
+					<td>xsd-PC</td>
+					<td>TE&ME Lab</td>
+					<!-- <td></td> -->
+					<td></td>
+				</tr>
+			</table>
+			<p id="ip_address_div_hide"><a href="javascript:void(0);" onclick="ip_address_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		
+		<!-- Authority -->
+		<p class="title1">Authority</p>
+		<a id="local_admin_anchor" href="javascript:void(0);" onclick="local_admin_show()">Local Admin Authority</a><br/><br/>
+		<div id="local_admin_div" style="display: none;">
+		
+			
+			
+			<p id="local_admin_div_hide"><a href="javascript:void(0);" onclick="local_admin_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		
+		<!-- Software -->
+		<p class="title1">
+			Software
+			<p style="color:red">
+				Note: <br/>
+				1. To install internal software, click start menu and type software center to finish installation by yourself.<br/>
+				2. To install external software which are <a style="color:blue">for free</a> and not listed in the software center, you should request for the local admin authority first!<br/>
+				3. Any third party software, cracking software is not allowed to install.<br/>
+			</p>
+			This is the Software Center! (Click "Win" key, and search for Software Center)<br/>
+			<img src="TeGuide\Software\Software Center.jpg" border="1" style="width:50%;height:auto%">
+		</p>
+		<br/>
+		
+		<a id="Git_anchor" href="javascript:void(0);" onclick="Git_show()" style="text-decoration:none">Git [software center]</a><br/>
+		<div id="Git_div" style="display: none;">
+			<p>software center -> Click Install & Check out -> the software will be installed automatically in the back-stage </p>
+			<img src="TeGuide\Software\Git\Git_1.jpg" border="1" style="width:60%;height:auto"><br/><br/>
+			<img src="TeGuide\Software\Git\Git_2_RightClick.jpg" border="1" style="width:40%;height:auto"><br/><br/>
+			<img src="TeGuide\Software\Git\Git_3_git version.jpg" border="1" style="width:40%;height:auto"><br/><br/>
+		<p id="Git_div_hide"><a href="javascript:void(0);" onclick="Git_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<a id="ni_package_manager_anchor" href="javascript:void(0);" onclick="ni_package_manager_show()" style="text-decoration:none">NI Package Manager (To Install TestStand, LavWindows/CVI)</a><br/>
+		<div id="ni_package_manager_div" style="display: none;">
+			<ol>
+				<li>
+					download NI Package Manager from
+					<a href="https://www.ni.com/en-us/support/downloads/ni-package-manager.html" target="_blank">https://www.ni.com/en-us/support/downloads/ni-package-manager.html</a>
+				</li><br/>
+				<img src="TeGuide\Software\NI Package Manager\NI Package Manager.jpg" border="1" style="width:30%;height:15%">
+				
+				<p style="color:red">NOTE: Before you start the installation, you should do the below actions first.</p>
+				<ol type="a">
+				  <li>Turn off fast startup (contact with local IT Helpdesk [Hood.Wang] for help)</li>
+				  <img src="TeGuide\Software\NI Package Manager\NI Package Manager_before_1.jpg" border="1" style="width:30%;height:30%"><br/><br/>
+
+				  <li>
+					Turn off the ransomware protection temporary (contact with Jan Dahlstroem for help)
+					<p style="color:red">
+						This action will take up to 50 minutes, and keep the off status for 24 hours.
+						You should finish the subsquent installation within 24 hours.
+					</p>
+				  </li>
+				  <img src="TeGuide\Software\NI Package Manager\Ransomware protection_1.jpg" border="1" style="width:30%;height:30%"><br/><br/>
+				  <img src="TeGuide\Software\NI Package Manager\Ransomware protection_2.jpg" border="1" style="width:30%;height:30%"><br/><br/>
+				</ol>
+			
+				<p style="color:red">
+					After the ransomware protection has been turned off, then start to install the software in NI Package Manager.
+				</p>
+				
+				<li>Install TestStand (V2020, 32-bit)</li>
+				<img src="TeGuide\Software\NI Package Manager\TestStand_V2020_32bit_1.jpg" border="1" style="width:50%;height:auto"><br/><br/>
+
+				<li>Install LabWindows/CVI and Drivers (V2020, 32-bit)</li>
+				<p style="color:red">Note: Use default selection</p>
+
+				<ol type="a">
+					<li>pic</li>
+					<img src="TeGuide\Software\NI Package Manager\LabWindowsCVI_V2020_32bit_1.jpg" border="1" style="width:50%;height:auto"><br/><br/>
+					
+					<li>pic</li>
+					<img src="TeGuide\Software\NI Package Manager\LabWindowsCVI_V2020_32bit_2.jpg" border="1" style="width:50%;height:auto"><br/><br/>
+					
+					<li>pic</li>
+					<img src="TeGuide\Software\NI Package Manager\LabWindowsCVI_V2020_32bit_3.jpg" border="1" style="width:50%;height:auto"><br/><br/>
+					
+					<li>pic</li>
+					<img src="TeGuide\Software\NI Package Manager\LabWindowsCVI_V2020_32bit_4.jpg" border="1" style="width:50%;height:auto"><br/><br/>					
+				</ol>
+				
+				<li>Licence</li>
+				Serial Number: M85X86839
+			</ol>
+			<p id="ni_package_manager_div_hide"><a href="javascript:void(0);" onclick="ni_package_manager_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<a id="notepadPlusPlus_anchor" href="javascript:void(0);" onclick="notepadPlusPlus_show()" style="text-decoration:none">Notepad++ [software center]</a><br/>
+		<div id="notepadPlusPlus_div" style="display: none;">
+			<p>software center -> Click Install & Check out -> the software will be installed automatically in the back-stage </p>
+			<img src="TeGuide\Software\Notepad++\Notepad++_1.jpg" border="1" style="width:60%;height:auto"><br/><br/>
+		<p id="notepadPlusPlus_div_hide"><a href="javascript:void(0);" onclick="notepadPlusPlus_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<a id="IZarc_anchor" href="javascript:void(0);" onclick="IZarc_show()" style="text-decoration:none">IZarc [software center]</a><br/>
+		<div id="IZarc_div" style="display: none;">
+			<p>software center -> Click Install & Check out -> the software will be installed automatically in the back-stage </p>
+			<img src="TeGuide\Software\IZarc\IZarc_1.jpg" border="1" style="width:60%;height:auto"><br/><br/>
+		<p id="IZarc_div_hide"><a href="javascript:void(0);" onclick="IZarc_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<a id="BeyondCompare_anchor" href="javascript:void(0);" onclick="BeyondCompare_show()" style="text-decoration:none">BeyondCompare [software center] [<a style="color:red">not for free, you can install WinMerge for instead</a>]</a><br/>
+		<div id="BeyondCompare_div" style="display: none;">
+			<p>software center -> Click Install & Check out -> the software will be installed automatically in the back-stage </p>
+			<img src="TeGuide\Software\BeyondCompare\BeyondCompare_1.jpg" border="1" style="width:60%;height:auto"><br/><br/>
+		<p id="BeyondCompare_div_hide"><a href="javascript:void(0);" onclick="BeyondCompare_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<a id="WinMerge_anchor" href="javascript:void(0);" onclick="WinMerge_show()" style="text-decoration:none">WinMerge [software center]</a><br/>
+		<div id="WinMerge_div" style="display: none;">
+			<p>software center -> Click Install & Check out -> the software will be installed automatically in the back-stage </p>
+			<img src="TeGuide\Software\WinMerge\WinMerge_1.jpg" border="1" style="width:60%;height:auto"><br/><br/>
+		<p id="WinMerge_div_hide"><a href="javascript:void(0);" onclick="WinMerge_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<a id="FileZilla_anchor" href="javascript:void(0);" onclick="FileZilla_show()" style="text-decoration:none">FileZilla [software center]</a><br/>
+		<div id="FileZilla_div" style="display: none;">
+			<p>software center -> Click Install & Check out -> the software will be installed automatically in the back-stage </p>
+			<img src="TeGuide\Software\FileZilla\FileZilla_1.jpg" border="1" style="width:60%;height:auto"><br/><br/>
+		<p id="FileZilla_div_hide"><a href="javascript:void(0);" onclick="FileZilla_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<!-- Office -->
+		<p class="title1">Office</p>
+		<a id="printer_installation_anchor" href="javascript:void(0);" onclick="printer_installation_show()">Printer Installation for CFM-W 2F</a>
+		<div id="printer_installation_div" style="display: none;">
+			<ol>
+			  <li>key "Windows" and search for the CirratoSearch application</li>
+			  <img src="TeGuide\Office\Printer Installation\printer_installation_1.jpg" border="1" style="width:30%;height:30%"><br/><br/>
+			  
+			  <li>Search for printer and start to install</li>
+			  <img src="TeGuide\Office\Printer Installation\printer_installation_2.jpg" border="1" style="width:50%;height:50%"><br/><br/>
+			  
+			  <li>Printer is ready</li>
+			  <img src="TeGuide\Office\Printer Installation\printer_installation_3.jpg" border="1" style="width:50%;height:50%"><br/><br/>
+			</ol>
+			
+			<p id="printer_installation_div_hide"><a href="javascript:void(0);" onclick="printer_installation_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<a id="CPC_add_trial_run_form_anchor" href="javascript:void(0);" onclick="CPC_add_trial_run_form_show()">CPC - 新增调试单</a>
+		<div id="CPC_add_trial_run_form_div" style="display: none;">
+			<ol>
+			  <li>pic (add_trial_run_form_1)</li>
+			  <img src="TeGuide\Office\CPC\CPC_add_trial_run_form_1.jpg" border="1" style="width:80%;height:auto"><br/><br/>
+			  
+			  <li>pic (add_trial_run_form_2)</li>
+			  <img src="TeGuide\Office\CPC\CPC_add_trial_run_form_2.jpg" border="1" style="width:70%;height:auto"><br/><br/>
+			  
+			  <li>pic (add_trial_run_form_3)</li>
+			  <img src="TeGuide\Office\CPC\CPC_add_trial_run_form_3.jpg" border="1" style="width:50%;height:50%"><br/><br/>
+			</ol>
+			
+			<p id="CPC_add_trial_run_form_div_hide"><a href="javascript:void(0);" onclick="CPC_add_trial_run_form_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<a id="DHL_anchor" href="javascript:void(0);" onclick="DHL_show()">DHL (use Google Browser)</a>
+		<div id="DHL_div" style="display: none;">
+			<p>Note: 1. 运单打印1份，发票打印2份</p>
+			<ol>
+				<li>pic (账号制单_1)</li>
+				<img src="TeGuide\Office\DHL\DHL_账号制单_1.jpg" border="1" style="width:75%;height:auto"><br/><br/>
+
+				<li>pic (账号制单_2)</li>
+				<img src="TeGuide\Office\DHL\DHL_账号制单_2.jpg" border="1" style="width:75%;height:auto"><br/><br/>
+
+				<li>pic (账号制单_3)</li>
+				<img src="TeGuide\Office\DHL\DHL_账号制单_3.jpg" border="1" style="width:75%;height:auto"><br/><br/>
+
+				<li>pic (预约取件4)</li>
+				<img src="TeGuide\Office\DHL\DHL_预约取件_4.jpg" border="1" style="width:80%;height:auto"><br/><br/>
+
+				<li>pic (申报信息)</li>
+				<img src="TeGuide\Office\DHL\DHL_申报信息.jpg" border="1" style="width:80%;height:auto"><br/><br/>
+
+				<li>pic (清关单据_无)</li>
+				<img src="TeGuide\Office\DHL\DHL_清关单据_无.jpg" border="1" style="width:80%;height:auto"><br/><br/>
+
+				<li>pic (无纸化设置)</li>
+				<img src="TeGuide\Office\DHL\DHL_无纸化设置.jpg" border="1" style="width:80%;height:auto"><br/><br/>
+			</ol>
+			
+			<ol>
+				<li>Contacts (Arxtron_Dimitry Yuryevich)</li>
+				<img src="TeGuide\Office\DHL\Contacts\Arxtron_Dimitry Yuryevich.jpg" border="1" style="width:auto;height:auto"><br/><br/>
+
+				<li>Contacts (Noffz_Manfred Pilters)</li>
+				<img src="TeGuide\Office\DHL\Contacts\Noffz_Manfred Pilters.jpg" border="1" style="width:auto;height:auto"><br/><br/>
+
+				<li>Contacts (VNE_CMM Jason Rego)</li>
+				<img src="TeGuide\Office\DHL\Contacts\VNE_CMM Jason Rego.jpg" border="1" style="width:auto;height:auto"><br/><br/>
+
+				<li>Contacts (VNE_CMM Petros Kaleab)</li>
+				<img src="TeGuide\Office\DHL\Contacts\VNE_CMM Petros Kaleab.jpg" border="1" style="width:auto;height:auto"><br/><br/>
+
+				<li>Contacts (VNE_USA Natasha Bushmakin)</li>
+				<img src="TeGuide\Office\DHL\Contacts\VNE_USA Natasha Bushmakin.jpg" border="1" style="width:auto;height:auto"><br/><br/>
+
+				<li>Contacts (VNE_Sweden_Ex Zhao Cui)</li>
+				<img src="TeGuide\Office\DHL\Contacts\VNE_Sweden_Ex Zhao Cui.jpg" border="1" style="width:auto;height:auto"><br/><br/>
+			</ol>
+			
+			<p id="DHL_div_hide"><a href="javascript:void(0);" onclick="DHL_hide()">Hide</a></p>
+		</div>
+		<br/>
+		
+		<!--
+		<a id="pre-acceptance_Demo[Radar 77GHZ 1.3 Nissan SEL Fixture]_anchor" href="javascript:void(0);" onclick="CPC_add_trial_run_form_show()">预验收 (Radar 77GHZ 1.3 Nissan SEL Fixture)</a>
+		<div id="CPC_add_trial_run_form_div" style="display: none;">
+			<ol>
+				<li>仓库收获</li>
+				<img src="TeGuide\Office\pre-acceptance\仓库收获_1.jpg" border="1" style="width:80%;height:auto"><br/><br/>
+				<img src="TeGuide\Office\pre-acceptance\仓库收获_2.jpg" border="1" style="width:80%;height:auto"><br/><br/>
+
+				<li>prepare for: PO, Invoice, 合同评审, 预验收报告</li>
+				<img src="TeGuide\Office\pre-acceptance\CPC\CPC_add_trial_run_form_1.jpg" border="1" style="width:80%;height:auto"><br/><br/>
+
+				<li>pic (add_trial_run_form_2)</li>
+				<img src="TeGuide\Office\pre-acceptance\CPC\CPC_add_trial_run_form_2.jpg" border="1" style="width:70%;height:auto"><br/><br/>
+
+				<li>pic (add_trial_run_form_3)</li>
+				<img src="TeGuide\Office\pre-acceptance\CPC\CPC_add_trial_run_form_3.jpg" border="1" style="width:50%;height:50%"><br/><br/>
+			</ol>
+			
+			<p id="CPC_add_trial_run_form_div_hide"><a href="javascript:void(0);" onclick="CPC_add_trial_run_form_hide()">Hide</a></p>
+		</div>
+		-->
+		<br/>
+		
+		<br/>
+		<br/>
+		<br/>
+    </body>
+	
+	
+	<script type="text/javascript">
+		function offline_marking_for_RDR2_show() {
+			document.getElementById("offline_marking_for_RDR2_div").style.display = "";
+			$("#offline_marking_for_RDR2_div_hide").css("border","1px solid red");
+			$("#offline_marking_for_RDR2_div_hide").css("font-size","150%");
+		}
+		function offline_marking_for_RDR2_hide() {
+			document.getElementById("offline_marking_for_RDR2_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#offline_marking_for_RDR2_anchor').offset().top-10}, 1000);
+		}
+		
+		function iTAC_error_1_show() {
+			document.getElementById("iTAC_error_1_div").style.display = "";
+			$("#iTAC_error_1_div_hide").css("border","1px solid red");
+			$("#iTAC_error_1_div_hide").css("font-size","150%");
+		}
+		function iTAC_error_1_hide() {
+			document.getElementById("iTAC_error_1_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#iTAC_error_1_anchor').offset().top-10}, 1000);
+		}
+		
+		function SEL_error_1_show() {
+			document.getElementById("SEL_error_1_div").style.display = "";
+			$("#SEL_error_1_div_hide").css("border","1px solid red");
+			$("#SEL_error_1_div_hide").css("font-size","150%");
+		}
+		function SEL_error_1_hide() {
+			document.getElementById("SEL_error_1_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#SEL_error_1_anchor').offset().top-10}, 1000);
+		}
+		
+		
+		function website_show() {
+			document.getElementById("website_div").style.display = "";	//显示
+			$("#website_div_hide").css("border","1px solid red");
+			$("#website_div_hide").css("font-size","150%");
+		}
+		function website_hide() {
+			document.getElementById("website_div").style.display = "none";	//隐藏后释放占用的页面空间
+			$('html, body').animate({scrollTop: $('#website_anchor').offset().top-10}, 1000);
+		}
+
+		
+		function ip_address_show() {
+			document.getElementById("ip_address_div").style.display = "";
+			$("#ip_address_div_hide").css("border","1px solid red");
+			$("#ip_address_div_hide").css("font-size","150%");
+		}
+		function ip_address_hide() {
+			document.getElementById("ip_address_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#ip_address_anchor').offset().top-10}, 1000);
+		}
+		
+		
+		function Git_show() {
+			document.getElementById("Git_div").style.display = "";
+			$("#Git_div_hide").css("border","1px solid red");
+			$("#Git_div_hide").css("font-size","150%");
+		}
+		function Git_hide() {
+			document.getElementById("Git_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#Git_anchor').offset().top-10}, 1000);
+		}
+		
+		
+		function ni_package_manager_show() {
+			document.getElementById("ni_package_manager_div").style.display = "";
+			$("#ni_package_manager_div_hide").css("border","1px solid red");
+			$("#ni_package_manager_div_hide").css("font-size","150%");
+		}
+		function ni_package_manager_hide() {
+			document.getElementById("ni_package_manager_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#ni_package_manager_anchor').offset().top-10}, 1000);
+		}
+		
+		
+		function notepadPlusPlus_show() {
+			document.getElementById("notepadPlusPlus_div").style.display = "";
+			$("#notepadPlusPlus_div_hide").css("border","1px solid red");
+			$("#notepadPlusPlus_div_hide").css("font-size","150%");
+		}
+		function notepadPlusPlus_hide() {
+			document.getElementById("notepadPlusPlus_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#notepadPlusPlus_anchor').offset().top-10}, 1000);
+		}
+		
+		
+		function IZarc_show() {
+			document.getElementById("IZarc_div").style.display = "";
+			$("#IZarc_div_hide").css("border","1px solid red");
+			$("#IZarc_div_hide").css("font-size","150%");
+		}
+		function IZarc_hide() {
+			document.getElementById("IZarc_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#IZarc_anchor').offset().top-10}, 1000);
+		}
+		
+		function BeyondCompare_show() {
+			document.getElementById("BeyondCompare_div").style.display = "";
+			$("#BeyondCompare_div_hide").css("border","1px solid red");
+			$("#BeyondCompare_div_hide").css("font-size","150%");
+		}
+		function BeyondCompare_hide() {
+			document.getElementById("BeyondCompare_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#BeyondCompare_anchor').offset().top-10}, 1000);
+		}
+		
+		
+		function WinMerge_show() {
+			document.getElementById("WinMerge_div").style.display = "";
+			$("#WinMerge_div_hide").css("border","1px solid red");
+			$("#WinMerge_div_hide").css("font-size","150%");
+		}
+		function WinMerge_hide() {
+			document.getElementById("WinMerge_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#WinMerge_anchor').offset().top-10}, 1000);
+		}
+		
+		
+		function FileZilla_show() {
+			document.getElementById("FileZilla_div").style.display = "";
+			$("#FileZilla_div_hide").css("border","1px solid red");
+			$("#FileZilla_div_hide").css("font-size","150%");
+		}
+		function FileZilla_hide() {
+			document.getElementById("FileZilla_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#FileZilla_anchor').offset().top-10}, 1000);
+		}
+		
+		function printer_installation_show() {
+			document.getElementById("printer_installation_div").style.display = "";
+			$("#printer_installation_div_hide").css("border","1px solid red");
+			$("#printer_installation_div_hide").css("font-size","150%");
+		}
+		function printer_installation_hide() {
+			document.getElementById("printer_installation_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#printer_installation_anchor').offset().top-10}, 1000);
+		}
+		
+		function CPC_add_trial_run_form_show() {
+			document.getElementById("CPC_add_trial_run_form_div").style.display = "";
+			$("#CPC_add_trial_run_form_div_hide").css("border","1px solid red");
+			$("#CPC_add_trial_run_form_div_hide").css("font-size","150%");
+		}
+		function CPC_add_trial_run_form_hide() {
+			document.getElementById("CPC_add_trial_run_form_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#CPC_add_trial_run_form_anchor').offset().top-10}, 1000);
+		}
+		
+		function DHL_show() {
+			document.getElementById("DHL_div").style.display = "";
+			$("#DHL_div_hide").css("border","1px solid red");
+			$("#DHL_div_hide").css("font-size","150%");
+		}
+		function DHL_hide() {
+			document.getElementById("DHL_div").style.display = "none";
+			$('html, body').animate({scrollTop: $('#DHL_anchor').offset().top-10}, 1000);
+		}
+		
+		function PC_RADAR_01_ST_AZ(){	
+			var cmd = new ActiveXObject("WScript.Shell");
+			var cmdStr = "cmd.exe /c mstsc /v:10.124.93.16";
+			cmd.Run(cmdStr);
+			cmd = null;
+        }
+		
+		
+		/*
+			tip:  提示信息
+			type: 消息类型 'info'是普通信息
+			               'success'是成功信息
+			               'danger'是失败信息
+						   'warning'是警告信息
+		*/
+		function ShowTip(tip, type) {
+			var $tip = $('#tip');
+			if ($tip.length == 0) {
+				$tip = $('<span id="tip" style="font-weight:bold;position:absolute;top:250px;left:50%;z-index:9999"></span>');
+				$('body').append($tip);
+			}
+			$tip.stop(true).attr('class', 'alert alert-' + type).text(tip).css('margin-left', -$tip.outerWidth() / 2).fadeIn(500).delay(1500).fadeOut(500);
+		}
+		
+		function ShowMsg(msg) {
+			ShowTip(msg, 'info');
+		}
+
+		function ShowSuccess(msg) {
+			ShowTip(msg, 'success');
+		}
+
+		function ShowFailure(msg) {
+			ShowTip(msg, 'danger');
+		}
+
+		function ShowWarn(msg, $focus, clear) {
+			ShowTip(msg, 'warning');
+		}
+		
+		
+		/* 网页刷新后回到开头 */
+		window.onbeforeunload = function(){
+			document.documentElement.scrollTop = 0;		// IE下
+			document.body.scrollTop = 0;				// 非IE下
+		}		
+		
+		
+	</script>
+</html>
+
+
+
+
